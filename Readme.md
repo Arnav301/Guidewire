@@ -5,60 +5,56 @@
 ![Stack](https://img.shields.io/badge/Stack-MERN-green)
 ![AI](https://img.shields.io/badge/AI-Risk%20Prediction-purple)
 ![Model](https://img.shields.io/badge/Pricing-Weekly-yellow)
-![Status](https://img.shields.io/badge/Status-Prototype-lightgrey)
 
-### 🏆 Guidewire DEVTrails 2026 Hackathon Submission  
-**Team Name:** Optimizers
+### 🏆 Guidewire DEVTrails 2026 Submission  
+**Team:** Optimizers
 
 ---
 
 # 📌 Overview
 
-**Earnova** is an AI-powered parametric insurance platform designed to protect **gig economy delivery partners** from income loss caused by environmental disruptions.
+**Earnova** is an AI-powered parametric insurance platform designed to protect **gig delivery workers** from income loss caused by external disruptions such as **heavy rain, extreme heat, pollution, floods, or curfews**.
 
-Delivery workers from platforms such as **Zomato, Swiggy, Amazon, Zepto and other logistics services** rely on daily work hours for income. However, external disruptions such as **heavy rainfall, extreme heat, floods, pollution, or curfews** can prevent them from working.
+Delivery partners rely on daily work hours to earn income. When environmental disruptions occur, they often lose earnings with no financial safety net.
 
-Earnova solves this by providing **automated income protection** using:
+Earnova solves this by combining:
 
-- 🌧 Real-time environmental monitoring  
-- 🤖 AI risk assessment  
-- ⚡ Automated parametric insurance triggers  
+- 🌧 Environmental monitoring  
+- 🤖 AI-based risk prediction  
+- ⚡ Automated parametric claim triggers  
 - 💳 Instant payout simulation  
 
-Instead of manual claims, **Earnova automatically detects disruptions and processes compensation** for lost income.
+The platform automatically detects disruptions and **initiates compensation for lost income without manual claims.**
 
 ---
 
 # 🎯 Problem Statement
 
-Gig workers often lose **20-30% of their earnings** due to external disruptions such as:
+Gig workers often lose **20–30% of their monthly income** due to environmental or social disruptions.
 
-| Disruption Type | Examples | Impact |
-|----------------|----------|--------|
-| 🌧 Environmental | Heavy rain, floods, extreme heat | Delivery operations stop |
-| 🌫 Pollution | High AQI levels | Unsafe outdoor working conditions |
-| 🚧 Social | Curfews, strikes, market shutdowns | Access to delivery zones restricted |
+| Disruption | Examples | Impact |
+|-----------|----------|--------|
+| 🌧 Weather | Heavy rain, floods, extreme heat | Deliveries halted |
+| 🌫 Pollution | Hazardous AQI levels | Unsafe working conditions |
+| 🚧 Social | Curfews, strikes, zone closures | Delivery routes blocked |
 
-These workers currently **have no financial safety net** for such disruptions.
-
-Earnova provides **AI-driven income protection designed specifically for gig workers.**
+Currently, gig workers have **no insurance protection for such income loss.**
 
 ---
 
 # 💡 Our Solution
 
-Earnova introduces a **parametric insurance system** where payouts are automatically triggered when predefined conditions occur.
+Earnova uses **parametric insurance**, where payouts are triggered automatically when disruption conditions are met.
 
-### Key Idea
+### How It Works
 
-Instead of filing claims manually:
+1️⃣ Worker activates weekly protection  
+2️⃣ System monitors environmental conditions  
+3️⃣ AI calculates disruption risk  
+4️⃣ Parametric trigger activates claim  
+5️⃣ Instant payout is processed  
 
-1️⃣ External data sources detect disruptions  
-2️⃣ AI calculates risk & validates conditions  
-3️⃣ Parametric trigger activates claim  
-4️⃣ Instant payout is processed
-
-This creates a **zero-touch insurance experience**.
+This creates a **zero-touch insurance experience for gig workers.**
 
 ---
 
@@ -66,11 +62,11 @@ This creates a **zero-touch insurance experience**.
 
 | Feature | Description |
 |-------|-------------|
-| 🤖 AI Risk Assessment | Predicts environmental risk levels |
-| 💰 Weekly Premium Model | Affordable pricing aligned with gig workers |
-| ⚡ Automatic Claim Trigger | Disruption automatically activates coverage |
-| 🛡 Fraud Detection | Detects suspicious claims |
-| 📊 Analytics Dashboard | Worker & Admin insights |
+| 🤖 AI Risk Assessment | Predict disruption probability |
+| 💰 Weekly Premium Model | Affordable micro-insurance |
+| ⚡ Automatic Claims | Disruptions trigger payouts |
+| 🛡 Fraud Detection | Detect suspicious claims |
+| 📊 Analytics Dashboard | Worker & admin insights |
 
 ---
 
@@ -79,13 +75,13 @@ This creates a **zero-touch insurance experience**.
 ```mermaid
 flowchart TD
 
-A[Worker Mobile/Web App]
-B[Earnova Frontend]
-C[Backend API Server]
+A[Worker App]
+B[Frontend Dashboard]
+C[Backend API]
 D[AI Risk Engine]
 E[Parametric Trigger Engine]
-F[Fraud Detection System]
-G[External Data APIs]
+F[Fraud Detection]
+G[External APIs]
 H[Payment Gateway]
 I[Database]
 
@@ -97,136 +93,102 @@ D --> E
 F --> E
 E --> H
 E --> I
-
 G --> D
-G --> E
 ```
 
 ---
 
-# 🔄 System Workflow
+# 🔄 Workflow
 
 ```mermaid
 flowchart LR
 
-A[Worker Registers] --> B[AI Risk Profiling]
+A[Worker Registers] --> B[Risk Profiling]
 B --> C[Weekly Premium Generated]
-C --> D[Worker Activates Coverage]
+C --> D[Coverage Activated]
+D --> E[Environmental Monitoring]
 
-D --> E[System Monitors Environment]
+E --> F{Disruption Detected}
 
-E --> F{Disruption Detected?}
+F -- Yes --> G[Auto Claim Triggered]
+G --> H[Payout Processed]
 
 F -- No --> E
-F -- Yes --> G[Parametric Trigger]
-
-G --> H[Auto Claim Initiated]
-H --> I[Income Loss Calculated]
-I --> J[Instant Payout Processed]
-
-J --> K[Dashboard Updated]
 ```
 
 ---
 
 # 📡 API Research & Data Sources
 
-Earnova integrates external APIs to monitor environmental disruptions.
+Earnova integrates multiple APIs to detect disruptions.
 
-| API Category | Purpose 🎯 | Data Used 📊 | Example APIs |
-|--------------|------------|--------------|--------------|
-| 🌧 Weather API | Detect rain & extreme heat | Rainfall, temperature, alerts | OpenWeatherMap, WeatherAPI |
-| 🌫 Air Pollution API | Detect hazardous air quality | AQI, PM2.5, PM10 | AQICN, OpenWeather Air API |
-| 🌍 Disaster API | Detect floods & disasters | Disaster type, location | NASA EONET |
-| 📍 Location API | Identify rider location | Latitude, longitude | Google Maps API |
-| 🗺 Map API | Visualize disruption zones | Area maps | Mapbox, Leaflet |
-| 🔔 Notification API | Send alerts to riders | Push notifications | Firebase FCM |
-| 🔐 Authentication API | Secure login | User authentication | Firebase Auth |
-| 💳 Payment API | Process payouts | Payment transactions | Razorpay, Stripe |
+| API | Purpose | Example |
+|----|--------|--------|
+| 🌧 Weather API | Detect rainfall & extreme heat | OpenWeatherMap |
+| 🌫 Pollution API | Monitor AQI levels | AQICN |
+| 🌍 Disaster API | Flood & disaster alerts | NASA EONET |
+| 📍 Location API | Worker location detection | Google Maps |
+| 🗺 Map API | Risk zone visualization | Mapbox / Leaflet |
+| 🔔 Notification API | Alerts to workers | Firebase FCM |
+| 🔐 Auth API | Secure login | Firebase Auth |
+| 💳 Payment API | Weekly payments & payouts | Razorpay |
 
 ---
 
 # 💰 Weekly Premium Calculation
 
-Earnova calculates premiums dynamically using AI risk prediction.
-
-### Formula
+Earnova dynamically calculates weekly premiums using risk scoring.
 
 ```
 Weekly Premium = Base Rate × Risk Score × Coverage Factor
 ```
 
-| Parameter | Description |
-|-----------|-------------|
-| Base Rate | Minimum cost of coverage |
-| Risk Score | AI predicted disruption probability |
-| Coverage Factor | Level of income protection |
-
-### Example
+Example:
 
 ```
 Base Rate = ₹30
 Risk Score = 1.3
 Coverage Factor = 1.2
 
-Weekly Premium = ₹46.8 ≈ ₹47
+Premium ≈ ₹47 per week
 ```
 
 ---
 
-# ⚡ Parametric Trigger Examples
+# ⚡ Parametric Triggers
 
 | Trigger | Condition | Action |
 |-------|----------|-------|
-| 🌧 Heavy Rain | Rainfall > 50 mm | Auto compensation |
-| 🌫 Severe Pollution | AQI > 400 | Worker receives payout |
-| 🌊 Flood Alert | Flood warning issued | Claim triggered |
-| 🚧 Curfew | Delivery zone shutdown | Income protection activated |
+| 🌧 Heavy Rain | Rainfall > 50mm | Auto compensation |
+| 🌫 Severe Pollution | AQI > 400 | Coverage activated |
+| 🌊 Flood Alert | Disaster alert issued | Claim triggered |
+| 🚧 Curfew | Zone closure detected | Income protection |
 
 ---
 
-# 🤖 AI Model Explanation
+# 🤖 AI Models
 
-Earnova uses **two AI modules**.
-
-## Risk Prediction Model
-
-Predicts disruption probability.
-
-### Inputs
+### Risk Prediction
+Predicts disruption probability using:
 
 - Weather history
-- Pollution levels
+- Pollution data
 - Flood zones
 - Traffic patterns
 - Delivery demand
 
-### Output
+### Fraud Detection
+Detects anomalies such as:
 
-```
-Risk Score (0.5 – 2.0)
-```
+- GPS spoofing  
+- Duplicate claims  
+- False disruption reports  
 
-Higher risk → higher premium.
+Possible algorithms:
 
----
-
-## Fraud Detection Model
-
-Detects fake claims.
-
-| Fraud Signal | Detection |
-|--------------|-----------|
-| GPS spoofing | Location verification |
-| Duplicate claims | Historical claim analysis |
-| Fake weather events | API validation |
-
-Algorithms that can be used:
-
-- Random Forest
-- Gradient Boosting
-- Isolation Forest
-- Logistic Regression
+- Random Forest  
+- Gradient Boosting  
+- Isolation Forest  
 
 ---
 
@@ -237,46 +199,55 @@ Algorithms that can be used:
 | Frontend | React.js |
 | Backend | Node.js, Express |
 | Database | MongoDB |
-| AI / ML | Python, Scikit-Learn |
+| AI/ML | Python, Scikit-Learn |
 | Maps | Google Maps API |
-| APIs | Weather, Pollution, Disaster |
-| Payments | Razorpay / Stripe sandbox |
+| Payments | Razorpay / Stripe |
 
 ---
 
 # 📊 Dashboard
 
 ### Worker Dashboard
-
-- Active weekly coverage
-- Protected earnings
+- Active weekly protection
+- Earnings protected
 - Claim history
 
 ### Admin Dashboard
-
 - Risk analytics
 - Fraud alerts
-- Claim statistics
 - Disruption heatmaps
 
 ---
 
 # 🎥 Demo
 
-### 📹 Demo Video
+Demo Video  
 ```
-Add demo video link here
-```
-
-### 🌐 Live Prototype
-```
-Add deployed application link
+Add demo video link
 ```
 
-### 📂 Repository
+Live Prototype  
 ```
-Add GitHub repository link
+Add deployment link
 ```
+
+---
+
+# 💼 Business Model & Impact
+
+Earnova follows a **weekly micro-insurance subscription model** designed for gig workers.
+
+| Tier | Weekly Premium | Protection |
+|----|---------------|-----------|
+| Basic | ₹20–30 | ₹500 coverage |
+| Standard | ₹40–60 | ₹1000 coverage |
+| Premium | ₹70–100 | ₹2000 coverage |
+
+### Market Opportunity
+
+- 15M+ gig workers in India  
+- Rapidly growing gig economy  
+- Potential to protect millions of workers from income instability
 
 ---
 
@@ -284,27 +255,26 @@ Add GitHub repository link
 
 | Role | Contribution |
 |-----|--------------|
-| Research & System Design | Problem analysis & architecture |
-| Backend Development | APIs & insurance logic |
-| Frontend Development | User interface |
-| AI & Risk Modeling | Risk prediction & fraud detection |
+| System Design | Architecture & planning |
+| Backend | APIs & insurance logic |
+| Frontend | User interface |
+| AI | Risk prediction & fraud detection |
 
 ---
 
 # 🚀 Future Improvements
 
-- Hyper-local risk prediction
-- Multi-platform gig worker coverage
-- Advanced fraud detection
-- Real-time disruption heatmaps
-- AI-driven policy recommendations
+- Hyper-local risk prediction  
+- Multi-platform gig worker coverage  
+- Advanced fraud detection  
+- Real-time disruption heatmaps  
 
 ---
 
-# ⭐ Why Earnova?
+<p align="center">
+Made with ❤️ by <b>Team Optimizers</b>
+</p>
 
-✔ Designed specifically for gig workers  
-✔ Automated parametric insurance model  
-✔ AI-driven risk prediction  
-✔ Zero-touch claim processing  
-✔ Real-time disruption detection
+<p align="center">
+© 2026 Earnova Project — All Rights Reserved
+</p>
