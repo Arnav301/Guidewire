@@ -1,0 +1,3 @@
+DeliverSure
+
+DeliverSure is a micro-protection platform designed for delivery partners (such as Zomato riders) that safeguards their income during unavoidable disruptions like heavy rainfall, high pollution, or natural disasters. By contributing a small weekly fee, riders receive financial support when environmental conditions significantly reduce their working hours, creating a reliable safety net and ensuring more stable earnings.
