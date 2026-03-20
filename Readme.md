@@ -65,7 +65,7 @@ This creates a **zero-touch insurance experience for gig workers.**
 | 🤖 AI Risk Assessment | Predict disruption probability |
 | 💰 Weekly Premium Model | Affordable micro-insurance |
 | ⚡ Automatic Claims | Disruptions trigger payouts |
-| 🛡 Fraud Detection | Detect suspicious claims |
+| 🛡 Fraud Detection | Multi-layer anti-spoofing & fraud prevention |
 | 📊 Analytics Dashboard | Worker & admin insights |
 
 ---
@@ -80,7 +80,7 @@ B[Frontend Dashboard]
 C[Backend API]
 D[AI Risk Engine]
 E[Parametric Trigger Engine]
-F[Fraud Detection]
+F[Fraud Detection Engine]
 G[External APIs]
 H[Payment Gateway]
 I[Database]
@@ -97,6 +97,54 @@ G --> D
 ```
 
 ---
+
+# ⚡ Adversarial Defense & Anti-Spoofing Strategy
+
+## 🚨 Threat Model
+- Fake GPS spoofing  
+- Mass coordinated claims (fraud rings)  
+- Location replay attacks  
+- Device/account farming  
+
+## 🧠 Multi-Layer Fraud Detection Architecture
+
+### 1️⃣ Location Integrity Verification
+- GPS + Network mismatch detection  
+- Cell tower consistency checks  
+- Historical movement patterns  
+- Impossible speed detection  
+
+### 2️⃣ Behavioral Anomaly Detection
+- Track working hours, routes, zones  
+- Flag abnormal activity spikes  
+- Detect identical behavior across accounts  
+
+### 3️⃣ Fraud Ring Detection
+- Shared device fingerprints  
+- IP clustering  
+- Synchronized claims  
+- Graph-based cluster detection  
+
+### 4️⃣ Environmental Cross-Validation
+- Match claims with Weather / AQI / Disaster APIs  
+- Reject if no real-world disruption exists  
+
+### 5️⃣ Risk Scoring Engine
+Risk Score = Location + Behavior + Network + Pattern  
+
+Low → Auto payout  
+Medium → Verification  
+High → Block  
+
+## ⚖️ False Positive Protection
+- GPS drift tolerance  
+- Multi-signal validation  
+- Progressive penalties  
+
+## 🔒 System Resilience
+- Continuous model retraining  
+- Adaptive thresholds  
+- Real-time monitoring  
 
 # 🔄 Workflow
 
@@ -223,12 +271,12 @@ Possible algorithms:
 
 Demo Video  
 ```
-Add demo video link
+https://drive.google.com/file/d/1Dz8LI2vgZsSlIizoiBZ_4_3mVklJXH-G/view?usp=sharing
 ```
 
 Live Prototype  
 ```
-Add deployment link
+🚧 Currently in development — deployment coming soon
 ```
 
 ---
@@ -253,12 +301,13 @@ Earnova follows a **weekly micro-insurance subscription model** designed for gig
 
 # 👥 Team Optimizers
 
-| Role | Contribution |
-|-----|--------------|
-| System Design | Architecture & planning |
-| Backend | APIs & insurance logic |
-| Frontend | User interface |
-| AI | Risk prediction & fraud detection |
+| Name | Role | Contribution |
+|------|------|-------------|
+| Arnav Verma | System Design / Full Stack | Architecture, backend APIs, system planning |
+| Ashish Kumar Singh | Backend Developer | API development, insurance logic, database handling |
+| Arvish Lotta | AI Developer | AI model integration, risk prediction logic |
+| Diya Batra | AI/ML Engineer | Risk prediction models, data analysis |
+| Chhavi Garg | UI/UX Designer | Interface design, user experience, dashboard aesthetics |
 
 ---
 
